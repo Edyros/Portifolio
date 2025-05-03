@@ -1,0 +1,234 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@layer components {
+    .container {
+        @apply max-w-7xl mx-auto;
+    }
+
+    .hexagon-border {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        background: linear-gradient(45deg, #3B82F6, #60A5FA);
+    }
+
+    .hexagon-image {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    /* Estilos para as barras de habilidades */
+    .skill-bar {
+        height: 4px;
+        background: rgba(59, 130, 246, 0.1);
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+    }
+
+    .skill-progress {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        will-change: width;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+    }
+
+    /* Gradientes específicos para cada nível */
+    .tech-card.solid .skill-progress {
+        background: linear-gradient(90deg, #3B82F6, #60A5FA);
+    }
+
+    .tech-card.intermediate .skill-progress {
+        background: linear-gradient(90deg, #9333EA, #C084FC);
+    }
+
+    .tech-card.exploring .skill-progress {
+        background: linear-gradient(90deg, #22C55E, #4ADE80);
+    }
+}
+
+@layer utilities {
+    .bg-gradient {
+        @apply bg-gradient-to-r from-purple-600 to-blue-500;
+    }
+    
+    .text-gradient {
+        @apply bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent;
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    .animate-slide-up {
+        animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    .animate-slide-in-right {
+        animation: slideInRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+}
+
+/* Animações otimizadas */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateZ(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translate3d(0, 20px, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translate3d(20px, 0, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+/* Cards de tecnologia com animações suaves */
+.tech-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px) translateZ(0);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito de brilho otimizado */
+.glow {
+    animation: glow 2s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px #3B82F6,
+                   0 0 10px #3B82F6,
+                   0 0 15px #3B82F6;
+        transform: translateZ(0);
+    }
+    to {
+        box-shadow: 0 0 10px #60A5FA,
+                   0 0 20px #60A5FA,
+                   0 0 30px #60A5FA;
+        transform: translateZ(0);
+    }
+}
+
+/* Efeito de flutuação otimizado */
+.float-animation {
+    animation: float 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+@keyframes float {
+    0% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(0, -10px, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}
+
+/* Efeito de digitação otimizado */
+.typing-effect::after {
+    content: '|';
+    animation: blink 1s step-end infinite;
+    transform: translateZ(0);
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Transições suaves para hover states */
+.tech-stack-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.tech-stack-item:hover {
+    transform: translateY(-5px) translateZ(0);
+}
+
+/* Efeitos de hover para links e botões */
+.hover-effect {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateZ(0);
+}
+
+.hover-effect:hover {
+    transform: translateY(-2px) translateZ(0);
+    filter: brightness(1.1);
+}
+
+/* Notificações com animações suaves */
+.notification {
+    animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+               fadeOut 0.3s cubic-bezier(0.4, 0, 0.2, 1) 2.7s forwards;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate3d(100%, 0, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    to {
+        transform: translate3d(0, 100%, 0);
+        opacity: 0;
+    }
+}

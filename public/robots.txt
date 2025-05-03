@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /storage/
+Disallow: /vendor/
+Disallow: /node_modules/
+
+Sitemap: {{ url('/sitemap.xml') }}

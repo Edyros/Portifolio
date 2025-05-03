@@ -16,6 +16,11 @@ class ContactController extends Controller
             'message' => 'required|string',
         ]);
 
+        // Adiciona dados úteis do usuário
+        $validated['ip'] = $request->ip();
+        $validated['user_agent'] = $request->header('User-Agent');
+        $validated['datetime'] = now()->format('d/m/Y H:i:s');
+
         try {
             Mail::to(config('mail.from.address'))->send(new ContactFormMail($validated));
 

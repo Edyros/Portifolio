@@ -4,12 +4,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PortfolioController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CurriculoController;
 
 Route::get('/', [PortfolioController::class, 'index'])->name('home');
 Route::get('/sobre', [PortfolioController::class, 'about'])->name('about');
 Route::get('/habilidades', [PortfolioController::class, 'skills'])->name('skills');
 Route::get('/projetos', [PortfolioController::class, 'projects'])->name('projects');
 Route::get('/contato', [PortfolioController::class, 'contact'])->name('contact');
+Route::get('/curriculo', [CurriculoController::class, 'gerar'])->name('curriculo.pdf');
 
 // Rota para processar o formulário de contato
 Route::post('/contato', function (Request $request) {

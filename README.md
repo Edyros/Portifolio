@@ -145,5 +145,5 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar
 ## 📞 Contato
 
 - GitHub: [@Edyros](https://github.com/Edyros)
-- LinkedIn: [Eduardo](https://linkedin.com/in/Edyros)
-- Email: seu-email@exemplo.com
+- LinkedIn: [Eduardo](https://www.linkedin.com/in/edyros-nfts-54ab3a363/)
+- Email: edyrosnfts@gmail.com

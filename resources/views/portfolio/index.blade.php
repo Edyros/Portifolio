@@ -193,7 +193,7 @@ return Response::json($data);
                 </p>
 
                 <div class="flex flex-wrap gap-4">
-                    <a href="#download" class="inline-flex items-center px-8 py-4 bg-gray-900 dark:bg-gradient-to-r dark:from-blue-600 dark:to-blue-500 text-white rounded-full hover:bg-gray-800 dark:hover:from-blue-700 dark:hover:to-blue-600 transition duration-300 transform hover:scale-105 hover:shadow-lg" aria-label="Baixar Currículo">
+                    <a href="/curriculo" target="_blank" class="inline-flex items-center px-8 py-4 bg-gray-900 dark:bg-gradient-to-r dark:from-blue-600 dark:to-blue-500 text-white rounded-full hover:bg-gray-800 dark:hover:from-blue-700 dark:hover:to-blue-600 transition duration-300 transform hover:scale-105 hover:shadow-lg" aria-label="Baixar Currículo">
                         <i class="fas fa-download mr-2"></i>
                         {{ __('portfolio.hero.download_cv') }}
                     </a>
@@ -607,55 +607,59 @@ return Response::json($data);
             <h3 class="text-3xl font-bold mb-10 text-blue-400 text-center">
                 Informações de Contato
             </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" style="justify-items: center">
-                <!-- Email -->
-                <a href="mailto:seu-email@exemplo.com" class="block group">
-                    <div class="flex items-center space-x-6">
-                        <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors">
-                            <i class="far fa-envelope text-blue-400 text-2xl"></i>
+            <div style="justify-items: center">
+
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Email -->
+                    <a href="mailto:edyrosnfts@gmail.com" class="block group">
+                        <div class="flex items-center space-x-6 min-w-0">
+                            <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors">
+                                <i class="far fa-envelope text-blue-400 text-2xl"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <p class="text-sm text-gray-500 mb-1">Email</p>
+                                <p class="text-lg text-gray-300 group-hover:text-blue-400 transition-colors truncate">edyrosnfts@gmail.com</p>
+                            </div>
                         </div>
-                        <div>
-                            <p class="text-sm text-gray-500 mb-1">Email</p>
-                            <p class="text-lg text-gray-300 group-hover:text-blue-400 transition-colors">seu-email@exemplo.com</p>
+                    </a>
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/5512997561047" target="_blank" class="block group">
+                        <div class="flex items-center space-x-6 min-w-0">
+                            <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-green-500/10 group-hover:bg-green-500/20 transition-colors">
+                                <i class="fab fa-whatsapp text-green-400 text-2xl"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <p class="text-sm text-gray-500 mb-1">WhatsApp</p>
+                                <p class="text-lg text-gray-300 group-hover:text-green-400 transition-colors truncate">+55 (12) 99756-1047</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <!-- WhatsApp -->
-                <a href="https://wa.me/5500000000000" target="_blank" class="block group">
-                    <div class="flex items-center space-x-6">
-                        <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-green-500/10 group-hover:bg-green-500/20 transition-colors">
-                            <i class="fab fa-whatsapp text-green-400 text-2xl"></i>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/edyros-nfts-54ab3a363/" target="_blank" class="block group">
+                        <div class="flex items-center space-x-6 min-w-0">
+                            <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors">
+                                <i class="fab fa-linkedin-in text-blue-400 text-2xl"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <p class="text-sm text-gray-500 mb-1">LinkedIn</p>
+                                <p class="text-lg text-gray-300 group-hover:text-blue-400 transition-colors truncate">linkedin.com/Edyros</p>
+                            </div>
                         </div>
-                        <div>
-                            <p class="text-sm text-gray-500 mb-1">WhatsApp</p>
-                            <p class="text-lg text-gray-300 group-hover:text-green-400 transition-colors">+55 (00) 00000-0000</p>
+                    </a>
+                    <!-- GitHub -->
+                    <a href="https://github.com/Edyros" target="_blank" class="block group">
+                        <div class="flex items-center space-x-6 min-w-0">
+                            <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors">
+                                <i class="fab fa-github text-blue-400 text-2xl"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <p class="text-sm text-gray-500 mb-1">GitHub</p>
+                                <p class="text-lg text-gray-300 group-hover:text-blue-400 transition-colors truncate">github.com/Edyros</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <!-- LinkedIn -->
-                <a href="https://linkedin.com/in/seu-perfil" target="_blank" class="block group">
-                    <div class="flex items-center space-x-6">
-                        <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors">
-                            <i class="fab fa-linkedin-in text-blue-400 text-2xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-sm text-gray-500 mb-1">LinkedIn</p>
-                            <p class="text-lg text-gray-300 group-hover:text-blue-400 transition-colors">linkedin.com/in/seu-perfil</p>
-                        </div>
-                    </div>
-                </a>
-                <!-- GitHub -->
-                <a href="https://github.com/seu-usuario" target="_blank" class="block group">
-                    <div class="flex items-center space-x-6">
-                        <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors">
-                            <i class="fab fa-github text-blue-400 text-2xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-sm text-gray-500 mb-1">GitHub</p>
-                            <p class="text-lg text-gray-300 group-hover:text-blue-400 transition-colors">github.com/seu-usuario</p>
-                        </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
 <hr>

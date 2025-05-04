@@ -207,26 +207,29 @@ return Response::json($data);
                 <section class="pt-8">
                     <h3 class="text-sm text-gray-500 dark:text-gray-300 mb-4">{{ __('portfolio.hero.main_tech') }}</h3>
                     <div class="flex flex-wrap gap-4">
-                        <a href="https://www.php.net/" target="_blank" rel="noopener noreferrer" class="tech-stack-item bg-gray-100 dark:bg-gray-700/50 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-all duration-300" aria-label="PHP">
+                        <a href="https://www.php.net/" target="_blank" rel="noopener noreferrer" class="tech-stack-item bg-gray-100 dark:bg-gray-700/50 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-all duration-300" aria-label="PHP" title="PHP: Linguagem de programação backend robusta e popular">
                             <i class="fab fa-php text-3xl text-blue-400"></i>
                         </a>
-                        <a href="https://laravel.com/" target="_blank" rel="noopener noreferrer" class="tech-stack-item bg-gray-100 dark:bg-gray-700/50 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-all duration-300" aria-label="Laravel">
+                        <a href="https://laravel.com/" target="_blank" rel="noopener noreferrer" class="tech-stack-item bg-gray-100 dark:bg-gray-700/50 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-all duration-300" aria-label="Laravel" title="Laravel: Framework PHP elegante para desenvolvimento web">
                             <i class="fab fa-laravel text-3xl text-red-400"></i>
                         </a>
-                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="tech-stack-item bg-gray-100 dark:bg-gray-700/50 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-all duration-300" aria-label="JavaScript">
+                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="tech-stack-item bg-gray-100 dark:bg-gray-700/50 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-all duration-300" aria-label="JavaScript" title="JavaScript: Linguagem essencial para interatividade no frontend">
                             <i class="fab fa-js text-3xl text-yellow-400"></i>
                         </a>
-                        <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer" class="tech-stack-item bg-gray-100 dark:bg-gray-700/50 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-all duration-300" aria-label="MySQL">
+                        <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer" class="tech-stack-item bg-gray-100 dark:bg-gray-700/50 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-all duration-300" aria-label="MySQL" title="MySQL: Banco de dados relacional confiável e rápido">
                             <i class="fas fa-database text-3xl text-blue-500"></i>
                         </a>
-                        <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" class="tech-stack-item bg-gray-100 dark:bg-gray-700/50 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-all duration-300" aria-label="Git">
+                        <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" class="tech-stack-item bg-gray-100 dark:bg-gray-700/50 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-all duration-300" aria-label="Git" title="Git: Controle de versão para projetos colaborativos">
                             <i class="fab fa-git-alt text-3xl text-orange-400"></i>
                         </a>
-                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="tech-stack-item bg-gray-100 dark:bg-gray-700/50 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-all duration-300" aria-label="GitHub">
+                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="tech-stack-item bg-gray-100 dark:bg-gray-700/50 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-all duration-300" aria-label="GitHub" title="GitHub: Hospedagem de código e colaboração open source">
                             <i class="fab fa-github text-3xl text-purple-400"></i>
                         </a>
-                        <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer" class="tech-stack-item bg-gray-100 dark:bg-gray-700/50 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-all duration-300" aria-label="AWS">
+                        <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer" class="tech-stack-item bg-gray-100 dark:bg-gray-700/50 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-all duration-300" aria-label="AWS" title="AWS: Infraestrutura em nuvem escalável e global">
                             <i class="fab fa-aws text-3xl text-orange-500"></i>
+                        </a>
+                        <a href="https://cloud.laravel.com" target="_blank" rel="noopener noreferrer" class="tech-stack-item bg-gray-100 dark:bg-gray-700/50 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-all duration-300" aria-label="Laravel Cloud" title="Laravel Cloud: Deploy e escalabilidade para aplicações Laravel">
+                            <svg class="text-strong" width="32" height="32" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M97.466 64.97 64.98 97.457H0v-64.97L32.485 0h64.98v64.98-.01Zm-64.98-45.477v6.501h38.986v38.987h6.5V19.493H32.486Zm0-6.5h51.978V64.97h6.5V6.49H32.486v6.501Zm0 19.492v32.486H64.97V32.485H32.485Z" fill="currentColor"/></svg>
                         </a>
                     </div>
                 </section>
@@ -428,12 +431,14 @@ return Response::json($data);
 
                 <div class="tech-card intermediate p-6 rounded-xl border border-purple-500/30 hover:border-purple-500 transition-all duration-300 group">
                     <div class="flex items-center justify-between mb-4">
-                        <i class="fas fa-database text-4xl text-purple-400"></i>
+                        <span>
+                            <svg class="text-strong" width="32" height="32" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M97.466 64.97 64.98 97.457H0v-64.97L32.485 0h64.98v64.98-.01Zm-64.98-45.477v6.501h38.986v38.987h6.5V19.493H32.486Zm0-6.5h51.978V64.97h6.5V6.49H32.486v6.501Zm0 19.492v32.486H64.97V32.485H32.485Z" fill="currentColor"/></svg>
+                        </span>
                         <span class="text-sm text-purple-400">
                             <span class="counter" data-target="65">0</span>%
                         </span>
                     </div>
-                    <h4 class="font-bold mb-2">MongoDB</h4>
+                    <h4 class="font-bold mb-2">Laravel Cloud</h4>
                     <div class="skill-bar">
                         <div class="skill-progress" data-progress="65"></div>
                     </div>

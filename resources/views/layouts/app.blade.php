@@ -179,13 +179,21 @@
                     © {{ date('Y') }} Eduardo. Todos os direitos reservados.
                 </p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="https://github.com/seu-usuario" target="_blank" class="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400">
-                        <span class="sr-only">GitHub</span>
-                        <i class="fab fa-github text-2xl"></i>
+                    <a href="mailto:edyrosnfts@gmail.com" target="_blank" class="transition-colors duration-200 text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400">
+                        <span class="sr-only">Email</span>
+                        <i class="far fa-envelope text-2xl transition-transform duration-200 hover:scale-125"></i>
                     </a>
-                    <a href="https://linkedin.com/in/seu-usuario" target="_blank" class="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400">
+                    <a href="https://wa.me/5512997561047" target="_blank" class="transition-colors duration-200 text-gray-600 hover:text-green-500 dark:text-gray-400 dark:hover:text-green-400">
+                        <span class="sr-only">WhatsApp</span>
+                        <i class="fab fa-whatsapp text-2xl transition-transform duration-200 hover:scale-125"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/edyros-nfts-54ab3a363/" target="_blank" class="transition-colors duration-200 text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-400">
                         <span class="sr-only">LinkedIn</span>
-                        <i class="fab fa-linkedin text-2xl"></i>
+                        <i class="fab fa-linkedin-in text-2xl transition-transform duration-200 hover:scale-125"></i>
+                    </a>
+                    <a href="https://github.com/Edyros" target="_blank" class="transition-colors duration-200 text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400">
+                        <span class="sr-only">GitHub</span>
+                        <i class="fab fa-github text-2xl transition-transform duration-200 hover:scale-125"></i>
                     </a>
                 </div>
             </div>

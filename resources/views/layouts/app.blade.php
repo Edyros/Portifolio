@@ -48,7 +48,7 @@
     {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Eduardo",
+        "name": "Eduardo Rafael",
         "jobTitle": "Desenvolvedor Full Stack",
         "url": "{{ url()->current() }}",
         "sameAs": [
@@ -65,7 +65,7 @@
         <div class="flex items-center justify-between">
             <div class="flex items-center space-x-2">
                 <a href="/" class="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent flex items-center">
-                    <i class="fas fa-code mr-2"></i>Eduardo
+                    <i class="fas fa-code mr-2"></i>Eduardo Rafael
                 </a>
             </div>
             

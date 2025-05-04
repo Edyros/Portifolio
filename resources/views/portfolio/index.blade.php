@@ -234,7 +234,7 @@ return Response::json($data);
 
             <div class="relative flex justify-center">
                 <div class="absolute inset-0 bg-gradient-to-r from-gray-200/40 to-gray-100/40 dark:from-blue-900/10 dark:to-purple-900/10 rounded-full filter blur-3xl animate-pulse"></div>
-                <div class="hexagon-border p-1 w-[400px] h-[400px] max-w-full floating">
+                <div class="hexagon-border p-1 w-[500px] h-[500px] max-w-full floating">
                     <div class="hexagon-image w-full h-full bg-gray-100 dark:bg-gray-800 overflow-hidden">
                         <img src="{{ asset('img/profile.jpg') }}" alt="Foto de Eduardo - Desenvolvedor Full Stack" class="w-full h-full object-cover">
                     </div>
@@ -250,19 +250,19 @@ return Response::json($data);
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div class="text-center">
                 <div class="text-4xl font-bold text-blue-500 mb-2">
-                    <span class="counter" data-target="5">0</span>+
+                    <span class="counter" data-target="4">0</span>+
                 </div>
                 <div class="text-gray-600 dark:text-gray-300">{{ __('portfolio.stats.years') }}</div>
             </div>
             <div class="text-center">
                 <div class="text-4xl font-bold text-blue-500 mb-2">
-                    <span class="counter" data-target="50">0</span>+
+                    <span class="counter" data-target="3">0</span>+
                 </div>
                 <div class="text-gray-600 dark:text-gray-300">{{ __('portfolio.stats.projects') }}</div>
             </div>
             <div class="text-center">
                 <div class="text-4xl font-bold text-blue-500 mb-2">
-                    <span class="counter" data-target="30">0</span>+
+                    <span class="counter" data-target="3">0</span>+
                 </div>
                 <div class="text-gray-600 dark:text-gray-300">{{ __('portfolio.stats.apis') }}</div>
             </div>
@@ -504,55 +504,19 @@ return Response::json($data);
             <span class="text-gray-500 font-mono">&lt;/projects&gt;</span>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Project Card 1 -->
-            <div class="group relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800/70 border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition duration-300">
-                <div class="absolute top-4 right-4 z-10">
-                    <span class="bg-blue-500/20 text-blue-400 text-xs px-3 py-1 rounded-full cursor-help" 
-                          data-tooltip="Laravel: 80%, MySQL: 70%, Vue.js: 60%">Laravel</span>
-                </div>
-                <img src="{{ asset('img/projects/payment-api.jpg') }}" alt="API REST" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-gray-100 via-gray-100/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
-                    <div class="absolute bottom-0 left-0 right-0 p-6">
-                        <h3 class="text-xl font-bold mb-2">API de Pagamentos</h3>
-                        <p class="text-gray-300 mb-4">Sistema completo de processamento de pagamentos com integração multi-gateway.</p>
-                        <button onclick="openProjectModal('payment-api')" class="inline-flex items-center text-blue-400 hover:text-blue-300">
-                            Ver Detalhes <i class="fas fa-arrow-right ml-2"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project Card 2 -->
+        <div class="flex justify-center items-center flex-wrap gap-8">
+            <!-- Project Card Whats4 ÚNICO -->
             <div class="group relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800/70 border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition duration-300">
                 <div class="absolute top-4 right-4 z-10">
                     <span class="bg-blue-500/20 text-blue-400 text-xs px-3 py-1 rounded-full cursor-help"
-                          data-tooltip="Node.js: 75%, MongoDB: 65%, Redis: 55%">API</span>
+                          data-tooltip="WhatsApp: 90%, AI: 80%, S3: 85%">Whats4</span>
                 </div>
-                <img src="{{ asset('img/projects/integration-system.jpg') }}" alt="Sistema de Integração" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+                <img src="{{ isset($imagens[0]) ? asset($imagens[0]) : '' }}" alt="Whats4 CRM" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
                 <div class="absolute inset-0 bg-gradient-to-t from-gray-100 via-gray-100/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
                     <div class="absolute bottom-0 left-0 right-0 p-6">
-                        <h3 class="text-xl font-bold mb-2">Sistema de Integração</h3>
-                        <p class="text-gray-300 mb-4">Hub de integração para múltiplos serviços e APIs externas.</p>
-                        <button onclick="openProjectModal('integration-system')" class="inline-flex items-center text-blue-400 hover:text-blue-300">
-                            Ver Detalhes <i class="fas fa-arrow-right ml-2"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project Card 3 -->
-            <div class="group relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800/70 border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition duration-300">
-                <div class="absolute top-4 right-4 z-10">
-                    <span class="bg-blue-500/20 text-blue-400 text-xs px-3 py-1 rounded-full cursor-help"
-                          data-tooltip="Laravel: 85%, Vue.js: 75%, Tailwind: 70%">Full Stack</span>
-                </div>
-                <img src="{{ asset('img/projects/admin-dashboard.jpg') }}" alt="Painel Administrativo" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-gray-100 via-gray-100/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
-                    <div class="absolute bottom-0 left-0 right-0 p-6">
-                        <h3 class="text-xl font-bold mb-2">Dashboard</h3>
-                        <p class="text-gray-300 mb-4">Painel administrativo moderno com Laravel e Vue.js.</p>
-                        <button onclick="openProjectModal('admin-dashboard')" class="inline-flex items-center text-blue-400 hover:text-blue-300">
+                        <h3 class="text-xl font-bold mb-2">Whats4</h3>
+                        <p class="text-gray-300 mb-4">CRM de atendimento e vendas via WhatsApp com IA, campanhas, multiempresa e integração com Facebook Ads.</p>
+                        <button onclick="openProjectModal('whats4')" class="inline-flex items-center text-blue-400 hover:text-blue-300">
                             Ver Detalhes <i class="fas fa-arrow-right ml-2"></i>
                         </button>
                     </div>
@@ -723,6 +687,7 @@ return Response::json($data);
 
 @section('scripts')
 @parent
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const texts = ['FULLSTACK DEVELOPER', 'PHP SPECIALIST', 'API ARCHITECT'];
@@ -793,318 +758,143 @@ document.addEventListener('DOMContentLoaded', function() {
             tooltip.classList.add('hidden');
         });
     });
-});
 
-// Project Details
-const projectDetails = {
-    'payment-api': {
-        title: 'API de Pagamentos',
-        image: "{{ asset('img/projects/payment-api-detail.jpg') }}",
-        demoUrl: 'https://demo-api-pagamentos.com',
-        githubUrl: 'https://github.com/seu-usuario/api-pagamentos',
-        description: `
-            <div class="space-y-8">
-                <!-- Imagem do Projeto -->
-                <div class="relative h-[300px] overflow-hidden rounded-t-2xl">
-                    <img src="{{ asset('img/projects/payment-api-detail.jpg') }}" alt="API de Pagamentos" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
-                </div>
-
-                <!-- Conteúdo -->
-                <div class="px-8 pb-8 space-y-8">
-                    <!-- Links do Projeto -->
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://demo-api-pagamentos.com" target="_blank" 
-                           class="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-lg hover:bg-blue-500/20 transition-all">
-                            <i class="fas fa-external-link-alt mr-2"></i>
-                            Demo ao Vivo
-                        </a>
-                        <a href="https://github.com/seu-usuario/api-pagamentos" target="_blank"
-                           class="inline-flex items-center px-4 py-2 bg-gray-700/50 text-gray-300 rounded-lg hover:bg-gray-700 transition-all">
-                            <i class="fab fa-github mr-2"></i>
-                            Código Fonte
-                        </a>
+    // Project Details
+    const projectDetails = {
+        'whats4': {
+            title: 'Whats4',
+            image: "{{ asset('img/projects/whats4.jpg') }}",
+            demoUrl: 'https://lp.whats4.com.br',
+            githubUrl: '',
+            description: `
+                <div class=\"space-y-8\">
+                    <div class=\"relative w-full h-[300px] overflow-hidden rounded-t-2xl\">
+                        @if(isset($imagens) && count($imagens) > 0)
+                            <div id=\"carousel-whats4\" class=\"relative w-full h-full\">
+                                <div class=\"swiper-wrapper\">
+                                    @foreach($imagens as $idx => $img)
+                                        <div class=\"swiper-slide w-full h-full\">
+                                            <img src=\"{{ asset($img) }}\" alt=\"Imagem Whats4 {{ $idx+1 }}\" class=\"w-full h-full object-cover\">
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <!-- Botões de navegação -->
+                                <div class=\"swiper-button-next\"></div>
+                                <div class=\"swiper-button-prev\"></div>
+                                <div class=\"swiper-pagination\"></div>
+                            </div>
+                        @else
+                            <img src=\"{{ isset($imagens[0]) ? asset($imagens[0]) : '' }}\" alt=\"Whats4 CRM\" class=\"w-full h-full object-cover\">
+                        @endif
+                        <div class=\"absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent pointer-events-none\"></div>
                     </div>
-
-                    <!-- Descrição -->
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Descrição do Projeto</h3>
-                        <p class="text-gray-300 leading-relaxed">
-                            Sistema completo de processamento de pagamentos desenvolvido com Laravel, 
-                            integrando múltiplos gateways de pagamento e oferecendo uma interface unificada para transações.
-                        </p>
-                    </div>
-                    
-                    <!-- Tecnologias -->
-                    <div>
-                        <h4 class="font-bold mb-4">Tecnologias Utilizadas</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm">Laravel 10</span>
-                            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm">MySQL</span>
-                            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm">Vue.js</span>
-                            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm">Redis</span>
+                    <div class=\"px-8 pb-8 space-y-8\">
+                        <div class=\"flex flex-wrap gap-4\">
+                            <a href=\"https://lp.whats4.com.br\" target=\"_blank\" 
+                               class=\"inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-lg hover:bg-blue-500/20 transition-all\">
+                                <i class=\"fas fa-external-link-alt mr-2\"></i>
+                                Acessar Plataforma
+                            </a>
                         </div>
-                    </div>
-
-                    <!-- Funcionalidades -->
-                    <div>
-                        <h4 class="font-bold mb-4">Principais Funcionalidades</h4>
-                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <li class="flex items-start space-x-2">
-                                <i class="fas fa-check-circle text-green-400 mt-1"></i>
-                                <span class="text-gray-300">Integração com múltiplos gateways de pagamento</span>
-                            </li>
-                            <li class="flex items-start space-x-2">
-                                <i class="fas fa-check-circle text-green-400 mt-1"></i>
-                                <span class="text-gray-300">Sistema de retry automático para transações falhas</span>
-                            </li>
-                            <li class="flex items-start space-x-2">
-                                <i class="fas fa-check-circle text-green-400 mt-1"></i>
-                                <span class="text-gray-300">Dashboard em tempo real com métricas</span>
-                            </li>
-                            <li class="flex items-start space-x-2">
-                                <i class="fas fa-check-circle text-green-400 mt-1"></i>
-                                <span class="text-gray-300">Sistema de webhooks para notificações</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Resultados -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="bg-gray-700/30 rounded-lg p-6 text-center">
-                            <div class="text-3xl font-bold text-blue-400 mb-2">10k+</div>
-                            <div class="text-gray-400">Transações Diárias</div>
+                        <div>
+                            <h3 class=\"text-xl font-bold mb-4\">Descrição do Projeto</h3>
+                            <p class=\"text-gray-300 leading-relaxed\">
+                                Plataforma robusta de CRM para atendimento e vendas via WhatsApp, desenvolvida para empresas que buscam automação, integração e performance em comunicação. Permite disparos em massa, gerenciamento dinâmico de setores, criação de chatbots personalizados, integração com inteligência artificial treinável, campanhas de anúncios via Facebook Ads (OAuth2), e muito mais.
+                            </p>
                         </div>
-                        <div class="bg-gray-700/30 rounded-lg p-6 text-center">
-                            <div class="text-3xl font-bold text-blue-400 mb-2">40%</div>
-                            <div class="text-gray-400">Redução no Tempo</div>
+                        <div>
+                            <h4 class=\"font-bold mb-4\">Tecnologias Utilizadas</h4>
+                            <div class=\"flex flex-wrap gap-2\">
+                                <span class=\"px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm\">Servidor próprio de WhatsApp</span>
+                                <span class=\"px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm\">Múltiplos servidores de disparo</span>
+                                <span class=\"px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm\">Integração OAuth2 Facebook</span>
+                                <span class=\"px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm\">S3 Navegação Visual</span>
+                                <span class=\"px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm\">Inteligência Artificial</span>
+                            </div>
                         </div>
-                        <div class="bg-gray-700/30 rounded-lg p-6 text-center">
-                            <div class="text-3xl font-bold text-blue-400 mb-2">99.9%</div>
-                            <div class="text-gray-400">Taxa de Sucesso</div>
+                        <div>
+                            <h4 class=\"font-bold mb-4\">Principais Funcionalidades</h4>
+                            <ul class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">
+                                <li class=\"flex items-start space-x-2\"><i class=\"fas fa-check-circle text-green-400 mt-1\"></i><span class=\"text-gray-300\">Disparo em massa via múltiplos servidores</span></li>
+                                <li class=\"flex items-start space-x-2\"><i class=\"fas fa-check-circle text-green-400 mt-1\"></i><span class=\"text-gray-300\">Gerenciamento dinâmico de setores e chatbots</span></li>
+                                <li class=\"flex items-start space-x-2\"><i class=\"fas fa-check-circle text-green-400 mt-1\"></i><span class=\"text-gray-300\">Criação e treinamento de IA por setor</span></li>
+                                <li class=\"flex items-start space-x-2\"><i class=\"fas fa-check-circle text-green-400 mt-1\"></i><span class=\"text-gray-300\">Campanhas e anúncios pagos via Facebook Ads</span></li>
+                                <li class=\"flex items-start space-x-2\"><i class=\"fas fa-check-circle text-green-400 mt-1\"></i><span class=\"text-gray-300\">Gerenciamento visual de arquivos no S3</span></li>
+                                <li class=\"flex items-start space-x-2\"><i class=\"fas fa-check-circle text-green-400 mt-1\"></i><span class=\"text-gray-300\">Envio de imagem, áudio e vídeo</span></li>
+                                <li class=\"flex items-start space-x-2\"><i class=\"fas fa-check-circle text-green-400 mt-1\"></i><span class=\"text-gray-300\">Multiempresa e multiusuário</span></li>
+                                <li class=\"flex items-start space-x-2\"><i class=\"fas fa-check-circle text-green-400 mt-1\"></i><span class=\"text-gray-300\">Gerenciamento de produtos, clientes e contatos</span></li>
+                                <li class=\"flex items-start space-x-2\"><i class=\"fas fa-check-circle text-green-400 mt-1\"></i><span class=\"text-gray-300\">Carrinho de compras integrado à conversa</span></li>
+                                <li class=\"flex items-start space-x-2\"><i class=\"fas fa-check-circle text-green-400 mt-1\"></i><span class=\"text-gray-300\">Mensagens padronizadas, etiquetas, estatísticas</span></li>
+                                <li class=\"flex items-start space-x-2\"><i class=\"fas fa-check-circle text-green-400 mt-1\"></i><span class=\"text-gray-300\">Detecção automática de novos contatos</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class=\"font-bold mb-4\">Diferenciais</h4>
+                            <ul class=\"list-disc pl-6 text-gray-300 space-y-2\">
+                                <li>Redução de erros em orçamentos e vendas</li>
+                                <li>Agilidade no atendimento e automação de processos</li>
+                                <li>Visual moderno e intuitivo para navegação de arquivos e setores</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        `
-    },
-    'integration-system': {
-        title: 'Sistema de Integração',
-        image: "{{ asset('img/projects/integration-system-detail.jpg') }}",
-        demoUrl: 'https://demo-integracao.com',
-        githubUrl: 'https://github.com/seu-usuario/sistema-integracao',
-        description: `
-            <div class="space-y-8">
-                <!-- Imagem do Projeto -->
-                <div class="relative h-[300px] overflow-hidden rounded-t-2xl">
-                    <img src="{{ asset('img/projects/integration-system-detail.jpg') }}" alt="Sistema de Integração" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
-                </div>
+            `
+        }
+    };
 
-                <!-- Conteúdo -->
-                <div class="px-8 pb-8 space-y-8">
-                    <!-- Links do Projeto -->
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://demo-integracao.com" target="_blank" 
-                           class="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-lg hover:bg-blue-500/20 transition-all">
-                            <i class="fas fa-external-link-alt mr-2"></i>
-                            Demo ao Vivo
-                        </a>
-                        <a href="https://github.com/seu-usuario/sistema-integracao" target="_blank"
-                           class="inline-flex items-center px-4 py-2 bg-gray-700/50 text-gray-300 rounded-lg hover:bg-gray-700 transition-all">
-                            <i class="fab fa-github mr-2"></i>
-                            Código Fonte
-                        </a>
-                    </div>
-
-                    <!-- Descrição -->
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Descrição do Projeto</h3>
-                        <p class="text-gray-300 leading-relaxed">
-                            Hub de integração desenvolvido para conectar múltiplos serviços e APIs, 
-                            facilitando a comunicação e troca de dados entre diferentes sistemas.
-                        </p>
-                    </div>
-                    
-                    <!-- Tecnologias -->
-                    <div>
-                        <h4 class="font-bold mb-4">Tecnologias Utilizadas</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm">Node.js</span>
-                            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm">MongoDB</span>
-                            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm">Redis</span>
-                            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm">RabbitMQ</span>
-                        </div>
-                    </div>
-
-                    <!-- Funcionalidades -->
-                    <div>
-                        <h4 class="font-bold mb-4">Principais Funcionalidades</h4>
-                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <li class="flex items-start space-x-2">
-                                <i class="fas fa-check-circle text-green-400 mt-1"></i>
-                                <span class="text-gray-300">Integração com mais de 20 APIs diferentes</span>
-                            </li>
-                            <li class="flex items-start space-x-2">
-                                <i class="fas fa-check-circle text-green-400 mt-1"></i>
-                                <span class="text-gray-300">Sistema de filas para processamento assíncrono</span>
-                            </li>
-                            <li class="flex items-start space-x-2">
-                                <i class="fas fa-check-circle text-green-400 mt-1"></i>
-                                <span class="text-gray-300">Monitoramento em tempo real</span>
-                            </li>
-                            <li class="flex items-start space-x-2">
-                                <i class="fas fa-check-circle text-green-400 mt-1"></i>
-                                <span class="text-gray-300">Transformação e normalização de dados</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Resultados -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="bg-gray-700/30 rounded-lg p-6 text-center">
-                            <div class="text-3xl font-bold text-blue-400 mb-2">60%</div>
-                            <div class="text-gray-400">Redução no Tempo</div>
-                        </div>
-                        <div class="bg-gray-700/30 rounded-lg p-6 text-center">
-                            <div class="text-3xl font-bold text-blue-400 mb-2">1M+</div>
-                            <div class="text-gray-400">Registros/Dia</div>
-                        </div>
-                        <div class="bg-gray-700/30 rounded-lg p-6 text-center">
-                            <div class="text-3xl font-bold text-blue-400 mb-2">99.9%</div>
-                            <div class="text-gray-400">Disponibilidade</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `
-    },
-    'admin-dashboard': {
-        title: 'Dashboard Administrativo',
-        image: "{{ asset('img/projects/admin-dashboard-detail.jpg') }}",
-        demoUrl: 'https://demo-dashboard.com',
-        githubUrl: 'https://github.com/seu-usuario/admin-dashboard',
-        description: `
-            <div class="space-y-8">
-                <!-- Imagem do Projeto -->
-                <div class="relative h-[300px] overflow-hidden rounded-t-2xl">
-                    <img src="{{ asset('img/projects/admin-dashboard-detail.jpg') }}" alt="Dashboard Administrativo" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
-                </div>
-
-                <!-- Conteúdo -->
-                <div class="px-8 pb-8 space-y-8">
-                    <!-- Links do Projeto -->
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://demo-dashboard.com" target="_blank" 
-                           class="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-lg hover:bg-blue-500/20 transition-all">
-                            <i class="fas fa-external-link-alt mr-2"></i>
-                            Demo ao Vivo
-                        </a>
-                        <a href="https://github.com/seu-usuario/admin-dashboard" target="_blank"
-                           class="inline-flex items-center px-4 py-2 bg-gray-700/50 text-gray-300 rounded-lg hover:bg-gray-700 transition-all">
-                            <i class="fab fa-github mr-2"></i>
-                            Código Fonte
-                        </a>
-                    </div>
-
-                    <!-- Descrição -->
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Descrição do Projeto</h3>
-                        <p class="text-gray-300 leading-relaxed">
-                            Painel administrativo moderno e responsivo desenvolvido com Laravel e Vue.js, 
-                            oferecendo uma interface intuitiva para gestão de dados e métricas.
-                        </p>
-                    </div>
-                    
-                    <!-- Tecnologias -->
-                    <div>
-                        <h4 class="font-bold mb-4">Tecnologias Utilizadas</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm">Laravel</span>
-                            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm">Vue.js</span>
-                            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm">Tailwind CSS</span>
-                            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm">Chart.js</span>
-                        </div>
-                    </div>
-
-                    <!-- Funcionalidades -->
-                    <div>
-                        <h4 class="font-bold mb-4">Principais Funcionalidades</h4>
-                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <li class="flex items-start space-x-2">
-                                <i class="fas fa-check-circle text-green-400 mt-1"></i>
-                                <span class="text-gray-300">Dashboard personalizado por usuário</span>
-                            </li>
-                            <li class="flex items-start space-x-2">
-                                <i class="fas fa-check-circle text-green-400 mt-1"></i>
-                                <span class="text-gray-300">Gráficos e métricas em tempo real</span>
-                            </li>
-                            <li class="flex items-start space-x-2">
-                                <i class="fas fa-check-circle text-green-400 mt-1"></i>
-                                <span class="text-gray-300">Sistema de relatórios customizáveis</span>
-                            </li>
-                            <li class="flex items-start space-x-2">
-                                <i class="fas fa-check-circle text-green-400 mt-1"></i>
-                                <span class="text-gray-300">Gestão de usuários e permissões</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Resultados -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="bg-gray-700/30 rounded-lg p-6 text-center">
-                            <div class="text-3xl font-bold text-blue-400 mb-2">50%</div>
-                            <div class="text-gray-400">Redução no Treinamento</div>
-                        </div>
-                        <div class="bg-gray-700/30 rounded-lg p-6 text-center">
-                            <div class="text-3xl font-bold text-blue-400 mb-2">30%</div>
-                            <div class="text-gray-400">Aumento na Produtividade</div>
-                        </div>
-                        <div class="bg-gray-700/30 rounded-lg p-6 text-center">
-                            <div class="text-3xl font-bold text-blue-400 mb-2">4.8/5</div>
-                            <div class="text-gray-400">Satisfação</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `
+    function openProjectModal(projectId) {
+        const modal = document.getElementById('project-modal');
+        const content = document.getElementById('modal-content');
+        const project = projectDetails[projectId];
+        
+        if (project) {
+            content.innerHTML = `
+                <h2 class=\"text-3xl font-bold px-8 py-6 border-b border-gray-700\">${project.title}</h2>
+                ${project.description}
+            `;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
     }
-};
 
-function openProjectModal(projectId) {
-    const modal = document.getElementById('project-modal');
-    const content = document.getElementById('modal-content');
-    const project = projectDetails[projectId];
-    
-    if (project) {
-        content.innerHTML = `
-            <h2 class="text-3xl font-bold px-8 py-6 border-b border-gray-700">${project.title}</h2>
-            ${project.description}
-        `;
-        modal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
+    function closeProjectModal() {
+        const modal = document.getElementById('project-modal');
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
     }
-}
 
-function closeProjectModal() {
-    const modal = document.getElementById('project-modal');
-    modal.classList.add('hidden');
-    document.body.style.overflow = 'auto';
-}
+    // Fechar modal ao clicar fora
+    document.getElementById('project-modal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeProjectModal();
+        }
+    });
 
-// Fechar modal ao clicar fora
-document.getElementById('project-modal').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closeProjectModal();
+    // Fechar modal com tecla ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeProjectModal();
+        }
+    });
+
+    // Inicializar o carrossel do Whats4 se existir
+    if (document.getElementById('carousel-whats4')) {
+        new Swiper('#carousel-whats4', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
     }
-});
 
-// Fechar modal com tecla ESC
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        closeProjectModal();
-    }
+    // No final do script, registre openProjectModal e closeProjectModal no window
+    window.openProjectModal = openProjectModal;
+    window.closeProjectModal = closeProjectModal;
 });
 </script>
 @endsection 

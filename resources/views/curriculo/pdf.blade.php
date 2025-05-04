@@ -200,7 +200,7 @@
         <!-- Coluna esquerda -->
         <td class="cv-left">
             <div class="cv-foto-box">
-                <div style="width:110px;height:110px;background:#e5e5e5;border-radius:55px;margin:0 auto 8px auto;"></div>
+                <img src="{{ $foto }}" class="cv-foto" alt="Foto de perfil">
             </div>
             <div class="cv-section">
                 <div class="cv-section-title">SOBRE MIM</div>
@@ -227,7 +227,7 @@
         <!-- Coluna direita -->
         <td class="cv-right">
             <div class="cv-main">
-                <div class="cv-nome">{{ $nome }}</div>
+                <div class="cv-nome">Eduardo Rafael</div>
                 <div class="cv-titulo">{{ $titulo }}</div>
                 <div class="cv-section-title-gray">EXPERIÊNCIA PROFISSIONAL</div>
                 <div class="cv-exp-block">
